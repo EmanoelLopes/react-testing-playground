@@ -2,6 +2,7 @@
   "name": "react-testing-unit-and-e2e",
   "version": "0.1.0",
   "private": true,
+  "license": "ISC",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -14,8 +15,32 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --verbose",
+    "unit": "yarn test --watchAll=false ",
+    "coverage": "yarn test --coverage --watchAll=false",
+    "coverage:open": "http-server -p 9000 coverage/lcov-report",
+    "e2e": "cypress open",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(js|jsx)?$": "babel-jest"
+    },
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/src/serviceWorker.js",
+      "!<rootDir>/src/reportWebVitals.js",
+      "!<rootDir>/src/index.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +59,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cypress": "^5.4.0"
   }
 }

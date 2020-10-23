@@ -1,0 +1,115 @@
+:root {
+  --light-background-color: #fff;
+  --light-text-color: #000;
+  --color-primary: #0984e3;
+  --color-primary-disabled: #74b9ff;
+  --color-white: #fff;
+  --color-light-grey: #ddd;
+
+  --dark-background-color: #000;
+  --dark-text-color: #fff;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--color-primary);
+}
+
+@media (prefers-color-scheme: dark) {
+  /* body {
+    background-color: var(--dark-background-color);
+    color: var(--dark-text-color);
+  } */
+}
+
+h1 {
+  font-size: 1.75em;
+}
+
+.App {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+[data-testid="main"] {
+  width: 100%;
+  max-width: 600px;
+  padding: 0 16px;
+}
+
+.form .form-control {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form .form-control label,
+.form .form-control input {
+  margin-bottom: 8px;
+  text-align: left;
+  width: 100%;
+}
+
+.form .form-control label {
+  align-items: baseline;
+  display: flex;
+}
+
+.form .form-control label > input[type="checkbox"] {
+  max-width: 20px;
+}
+
+.form .form-control {
+  padding: 8px 0;
+}
+
+.form .form-control input {
+  border: 2px solid var(--color-light-grey);
+  padding: 12px 16px;
+}
+
+.form .form-control button[type="submit"] {
+  background-color: var(--color-primary);
+  border: none;
+  color: var(--color-white);
+  cursor: pointer;
+  font-weight: bold;
+  padding: 16px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.form .form-control button[disabled] {
+  background-color: var(--color-primary-disabled);
+  cursor: not-allowed;
+}
