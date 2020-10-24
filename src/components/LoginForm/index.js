@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from 'components/Button';
 import InputText from 'components/InputText';
+import Checkbox from 'components/Checkbox';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -38,10 +39,10 @@ const Login = () => {
       </div>
       <div className="form-control">
         <label htmlFor="terms">
-          <input
-            type="checkbox"
-            id="terms"
+          <Checkbox
+            id="terms-and-conditions"
             value={terms}
+            checked={terms}
             onChange={(e) => {
               setTerms(e.target.checked);
             }}
