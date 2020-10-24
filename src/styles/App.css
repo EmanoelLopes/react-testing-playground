@@ -98,7 +98,7 @@ h1 {
   padding: 12px 16px;
 }
 
-.form .form-control button[type="submit"] {
+.form .form-control .btn-primary {
   background-color: var(--color-primary);
   border: none;
   color: var(--color-white);
@@ -109,7 +109,7 @@ h1 {
   width: 100%;
 }
 
-.form .form-control button[disabled] {
+.form .form-control .btn-primary[disabled] {
   background-color: var(--color-primary-disabled);
   cursor: not-allowed;
 }

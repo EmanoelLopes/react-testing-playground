@@ -1,33 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Button from 'components/Button';
+import InputText from 'components/InputText';
 
 const Login = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [terms, setTerms] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+
   return (
     <form className="form login-form" data-testid="login-form" noValidate>
       <div className="form-control">
         <label htmlFor="email-or-login">
           Email address or Login:
         </label>
-        <input
+        <InputText
           type="email"
           id="email-or-login"
-          autoComplete="current-password"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter you email"
+          data-testid="email-or-login"
         />
       </div>
       <div className="form-control">
         <label htmlFor="password">
           Your password:
         </label>
-        <input
+        <InputText
           type="password"
           id="password"
-          placeholder="Password" />
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Password"
+          data-testid="password"
+        />
       </div>
       <div className="form-control">
         <label htmlFor="terms">
           <input
             type="checkbox"
             id="terms"
+            value={terms}
+            onChange={(e) => {
+              setTerms(e.target.checked);
+            }}
+            data-testid="terms-and-conditions"
           />
           <span>
             I accept the <a href="https://www.example.com"> terms and conditions</a>
@@ -35,9 +53,21 @@ const Login = () => {
         </label>
       </div>
       <div className="form-control">
-        <button type="submit" disabled={true} onClick={() => console.log('submited!')}>
-          Submit
-        </button>
+        <Button
+          className="btn-primary"
+          type={`submit`}
+          disabled={!terms}
+          onClick={(e) => {
+            e.preventDefault();
+            setSubmitSuccess(true);
+          }}
+          text={`Submit`}
+        />
+      </div>
+      <div className="form-control">
+        {submitSuccess && (
+          <p className="submit-success" data-testid="submit-success">Formulário enviado com sucesso.</p>
+        )}
       </div>
     </form>
   );
