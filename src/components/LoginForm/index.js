@@ -18,6 +18,7 @@ const Login = () => {
         <InputText
           type="email"
           id="email-or-login"
+          label="Email or Login"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter you email"
