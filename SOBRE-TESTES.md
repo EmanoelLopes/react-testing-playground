@@ -104,8 +104,8 @@ Code Coverage
 - [Common mistakes with React Testing Library - With Kent C Dodds, the creator of Testing Library](https://kentcdodds.com/blog/common-mistakes-with-react-testing-library)
 
 ## Cursos (online)
-[JS com TDD na Prática](https://www.udemy.com/course/js-com-tdd-na-pratica/?couponCode=PROMOOCT20)
-[React - The Complete Guide (incl Hooks, React Router, Redux)](https://www.udemy.com/course/curso-reactjs-ninja/)
-[Modern React with Redux [2020 Update]](https://www.udemy.com/course/react-redux/);
-[React - The Complete Guide (incl Hooks, React Router, Redux)](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
-[JavaScript - The Complete Guide 2020 (Beginner + Advanced)](https://www.udemy.com/course/javascript-the-complete-guide-2020-beginner-advanced/)
+- [JS com TDD na Prática](https://www.udemy.com/course/js-com-tdd-na-pratica/?couponCode=PROMOOCT20)
+- [React - The Complete Guide (incl Hooks, React Router, Redux)](https://www.udemy.com/course/curso-reactjs-ninja/)
+- [Modern React with Redux [2020 Update]](https://www.udemy.com/course/react-redux/);
+- [React - The Complete Guide (incl Hooks, React Router, Redux)](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
+- [JavaScript - The Complete Guide 2020 (Beginner + Advanced)](https://www.udemy.com/course/javascript-the-complete-guide-2020-beginner-advanced/)
