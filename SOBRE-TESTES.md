@@ -30,6 +30,8 @@ São tipos de testes que simulam o fluxo real do comportamento de um software, v
 
 O que se analiza durante a cobertura de testes:
 
+![code coverage](./public/coverage.png)
+
  - Lines - Cada linha do seu código foi executada?
  - Branches - Os `ifs` e `elses` do seu código foram testados?
  - Functions - As funções do seu código foram chamadas em todos os cenários?
