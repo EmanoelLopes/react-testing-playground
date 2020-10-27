@@ -3,80 +3,38 @@ import userEvent from '@testing-library/user-event';
 import Login from 'components/LoginForm';
 
 describe('<Login />', () => {
-  it('should render component properly', () => {
-    render(<Login />);
-    const loginForm = screen.getByTestId('login-form');
+  it('1) deve renderizar o componente principal', () => {
 
-    expect(loginForm).toBeInTheDocument();
-    expect(loginForm).not.toBeEmptyDOMElement();
-    expect(loginForm).toBeInstanceOf(HTMLElement);
+    expect(false).toBe(true);
   });
 
-  it('submit button should start disabled', () => {
-    render(<Login />);
-    const button = screen.getByRole('button');
-    
-    expect(button).toBeDisabled();
+  it('2) o botão de submit deve começar desabilitado', () => {
+
+    expect(false).toBe(true);
   });
 
-  it('should set email value', () => {
-    render(<Login />);
-    const email = screen.getByTestId('email-or-login');
+  it('3) Deve preencher o campo e verificar se o input de email é do tipo "email"', () => {
 
-    expect(email).toHaveValue('');
-
-    userEvent.type(email, 'email@test.com');
-
-    expect(email).toHaveValue('email@test.com');
+    expect(false).toBe(true);
   });
 
-  it('should set password value', () => {
-    render(<Login />);
-    const password = screen.getByTestId('password');
+  it('4) Deve preencher o campo e verificar se o input de senha é do tipo "password"', () => {
 
-    expect(password).toHaveValue('');
-
-    userEvent.type(password, '123456abc@');
-
-    expect(password).toHaveValue('123456abc@');
+    expect(false).toBe(true);
   });
 
-  it('should set terms and conditions checkbox value', () => {
-    render(<Login />);
-    const terms = screen.getByTestId('terms-and-conditions');
+  it('5) Deve preencher o campo e verificar se o input de check é do tipo checkbox', () => {
 
-    expect(terms).not.toBeChecked();
-
-    userEvent.click(terms);
-
-    expect(terms).toBeChecked();
+    expect(false).toBe(true);
   });
 
-  it('submit button should be enabled if terms and conditions checkbox is checked', () => {
-    render(<Login />);
-    const button = screen.getByRole('button');
-    const terms = screen.getByTestId('terms-and-conditions');
-    
-    // submit button starts disabled
-    expect(button).toBeDisabled();
-    
-    // Check terms and conditions the enable submit button 
-    userEvent.click(terms);
-    
-    // expect submit button to be enabled
-    expect(button).not.toBeDisabled();
+  it('6) deve habilitar o botão de submit caso todos os inputs estejam preenchidos', () => {
+
+    expect(false).toBe(true);
   });
 
-  it('should show submit success message after submit', async () => {
-    render(<Login />);
+  it('7) deve aparecer a mensagem de sucesso após submeter o formulário', () => {
 
-    // Check terms and conditions the enable submit button 
-    userEvent.click(screen.getByTestId('terms-and-conditions'));
-    // fire click event on submit button
-    userEvent.click(screen.getByRole('button'));
-    // wait for element to be rendered in screen
-    await waitFor(() => {
-      expect(screen.getByTestId('submit-success')).toBeInTheDocument();
-    });
+    expect(false).toBe(true);
   });
 });

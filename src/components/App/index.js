@@ -5,7 +5,7 @@ import 'styles/App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" data-testid="App">
       <header className="App-header">
         <h1>Login Page</h1>
       </header>

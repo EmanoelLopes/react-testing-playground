@@ -2,9 +2,10 @@ import { render, screen } from '@testing-library/react';
 import App from '.';
 
 describe('<App />', () => {
-  it('should render App', () => {
+  it('should render "App" component', () => {
     render(<App />);
-    const element = screen.getByText(/login page/i);
-    expect(element).toBeInTheDocument();
+    const app = screen.getByTestId('App');
+
+    expect(app).toBeInTheDocument();
   });
 });
